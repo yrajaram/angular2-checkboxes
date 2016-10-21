@@ -2,6 +2,17 @@
 
 I faced issues with 2-way binding and checkboxes when I had to display a large number of checkboxes using two *ngFor loops (that created a two dimensional array of checkboxes). I could not find any satisfactory solution and so here is what I ended up doing. Let me know if you find it useful or suggest improvements. Cheers!
 
+Quick Start
+-----------
+
+```shell
+$ git clone  https://github.com/yrajaram/angular2-checkboxes.git
+$ cd angular2-checkboxes
+$ npm install
+$ npm start
+```
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.10.
 
 ## Development server
