@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  private title = '2-way binding!';
+  title = '2-way binding!';
   private logStr="";
   private mapStr = "";
 
