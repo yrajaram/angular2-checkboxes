@@ -1,3 +1,48 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="card">
+	<div class="card-header">
+		<h2>{{title}}</h2>
+	</div>
+	<div class="card-block">
+		<table cellpadding="4" cellspacing="0" >
+			<tbody><tr>
+				<th style="border:none">
+					&nbsp;
+				</th>
+				<th *ngFor="let h of headings"> {{ h.description }} </th>
+			</tr>
+
+			<tr  *ngFor="let v of values;let i = index">
+				<th align="right"> {{v.name}} </th>
+				<td *ngFor="let head of headings;let j = index" align="center">
+					<input 
+					id="{{i}}{{j}}"
+					type="checkbox" 
+					(change)="checkedMatrix( i,j, $event.target.checked)">
+				</td>          
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+<button (click)="ok()">Ok</button>
+<button (click)="cancel()">Cancel</button>
+
+
+<div *ngIf="logStr">
+	<div class="card">
+		<div class="card-header"> <h2>Event Log</h2> </div>
+		<div class="card-block">
+			{{logStr}}
+		</div>
+	</div>
+</div>
+
+<div *ngIf="mapStr">
+	<div class="card">
+		<div class="card-header"><h2>Checked Value</h2></div>
+		<div class="card-block">
+			{{mapStr}}
+		</div>
+	</div>
+</div>
